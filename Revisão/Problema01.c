@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int tamanho(int tam){
-    printf("Quantidade de numeros -> ");
+    printf("\nQuantidade de numeros -> ");
     scanf("%i", &tam);
     printf("\n");
 
@@ -14,23 +14,23 @@ void preencher(int * seq, int tam){
     for(i=0; i<tam; i++){
         printf("Valor %i -> ", i+1);
         scanf("%i", &seq[i]);
-        printf("\n");
     }
 }
 
 int media(int *seq, int tam){
-    int i;
-    float soma = 0;
+    int i, soma = 0;
+    float media;
 
     for(i=0; i<tam; i++){
         soma += seq[i];
     }
+    media = soma/tam;
 
-    return (soma/tam);
+    return (media);
 }
 
 int main(){
-    int *seq, tam, i;
+    int *seq, tam = 0;
     float med;
 
     tam  = tamanho(tam);
@@ -39,7 +39,7 @@ int main(){
     preencher(seq, tam);
     
     med = media(seq, tam);
-    printf("\nSoma: %.1f", med);
+    printf("\nMedia: %.1f\n", med);
     
     free(seq);
     return 0;
