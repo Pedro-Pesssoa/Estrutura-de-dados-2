@@ -9,7 +9,7 @@ int main(){
     scanf("%i", &n);
 
     printf("\nValor -> Fatorial\n");
-    for(i=1; i<n; i++, cont++){
+    for(i=1; i<n+1; i++, cont++){
         result = fatorial(cont);
         printf("  %i         %i\n",i,result);
     }
@@ -18,7 +18,7 @@ int main(){
 
 int fatorial(int cont){
 
-    int result, i;
+    int result;
  
     if(cont == 0){
         result = 1;

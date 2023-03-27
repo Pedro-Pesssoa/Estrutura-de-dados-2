@@ -4,7 +4,6 @@
 
 int main(){
     int i;
-    float temp;
 
     printf("\nCelsius -> Fahrenheit\n");
     for(i=30; i<51; i++){
